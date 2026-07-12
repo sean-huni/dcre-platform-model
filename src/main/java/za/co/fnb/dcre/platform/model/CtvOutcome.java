@@ -1,0 +1,17 @@
+package za.co.fnb.dcre.platform.model;
+
+/** Symbolic CTV outcome vocabulary (GLOSSARY; DDxxx mapping pending A-34). */
+public enum CtvOutcome {
+    PASS,
+    FAIL_DUPLICATE_E2E,
+    FAIL_ACCOUNT_NOT_FOUND,
+    FAIL_ACCOUNT_NOT_ACTIVE,
+    FAIL_EXCEEDS_RF_BALANCE,
+    FAIL_EXCEEDS_CC_LIMIT,
+    FAIL_MANDATE_NOT_FOUND,
+    FAIL_CONTRACT_MISMATCH,
+    FAIL_MANDATE_NOT_ACTIVE,
+    FAIL_MANDATE_NOT_EFFECTIVE,
+    FAIL_MANDATE_EXPIRED,
+    FAIL_EXCEEDS_MANDATE_CAP
+}
