@@ -4,6 +4,8 @@ package za.co.fnb.dcre.platform.model;
 public enum CtvOutcome {
     PASS,
     FAIL_DUPLICATE_E2E,
+    /** R-41: in-file content-hash clash (same essential fields, any e2e); later occurrence fails. */
+    FAIL_DUPLICATE_TX,
     FAIL_ACCOUNT_NOT_FOUND,
     FAIL_ACCOUNT_NOT_ACTIVE,
     FAIL_EXCEEDS_RF_BALANCE,
