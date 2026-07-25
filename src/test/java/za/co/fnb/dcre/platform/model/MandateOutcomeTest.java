@@ -25,6 +25,7 @@ class MandateOutcomeTest {
                         "FAIL_CONTRACT_FORMAT",
                         "FAIL_AMEND_UNKNOWN_REF",
                         "FAIL_CANCEL_UNKNOWN_REF",
+                        "CONTRACT_HAS_LIVE_MANDATE",
                         "FAIL_SCORE_BELOW_THRESHOLD",
                         "HOLD_BUREAU_UNAVAILABLE"),
                 Arrays.stream(MandateOutcome.values()).map(Enum::name).toList());
