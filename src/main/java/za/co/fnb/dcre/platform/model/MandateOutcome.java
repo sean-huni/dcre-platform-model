@@ -32,6 +32,15 @@ public enum MandateOutcome {
     /** MRV action stage: CANCEL targets a mandate_ref unknown to spine and projection. Item-tier reject, MIR-reportable. */
     FAIL_CANCEL_UNKNOWN_REF,
 
+    /**
+     * MRV admissibility stage (SCRUM-91, refines R-20): the contract already carries an
+     * effectively-active mandate (PDNG/ACCP/SUSPENDED) under a DIFFERENT mandate_ref.
+     * Item-tier reject, MIR-reportable. Deliberately NOT prefixed FAIL_: this is an
+     * admissibility refusal of a well-formed instruction, not a defect in it, and the
+     * name is the reason string the spec and plan pin for the OnHost NACK.
+     */
+    CONTRACT_HAS_LIVE_MANDATE,
+
     /** MAF gate: bureau score below the per-client threshold; spine SCORE_DECLINED, reportable via MIR (R-08). */
     FAIL_SCORE_BELOW_THRESHOLD,
 
