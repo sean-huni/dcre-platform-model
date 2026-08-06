@@ -1,14 +1,14 @@
 package za.co.fnb.dcre.platform.model;
 
 /**
- * Symbolic MRV/MAF verdict vocabulary for the mandates flow (M10, SCRUM-73;
- * CtvOutcome pattern). Persisted by name into man_validation_log and the MAF
+ * Symbolic MRV/MAS verdict vocabulary for the mandates flow (M10, SCRUM-73;
+ * CtvOutcome pattern). Persisted by name into man_validation_log and the MAS
  * enquiry outcome, then rolled up per R-41 semantics and reported to OnHost
  * through MIR NACK reasons: renames are data-contract breaks.
  */
 public enum MandateOutcome {
 
-    /** MRV chain + MAF gate both passed; row proceeds to MIT initialization. */
+    /** MRV chain + MAS gate both passed; row proceeds to MIT initialization. */
     PASS,
 
     /** MRV structural stage: malformed record/field. Whole-file fatal rolls up BUSINESS_FILE_REJECTED; reportable via MIR NACK. */
@@ -41,9 +41,9 @@ public enum MandateOutcome {
      */
     CONTRACT_HAS_LIVE_MANDATE,
 
-    /** MAF gate: bureau score below the per-client threshold; spine SCORE_DECLINED, reportable via MIR (R-08). */
+    /** MAS gate: bureau score below the per-client threshold; spine SCORE_DECLINED, reportable via MIR (R-08). */
     FAIL_SCORE_BELOW_THRESHOLD,
 
-    /** MAF gate: bureau unreachable; NOT a decline (R-12 carry-over), row stays SCORE_PENDING for the next run, never MIR-NACKed. */
+    /** MAS gate: bureau unreachable; NOT a decline (R-12 carry-over), row stays SCORE_PENDING for the next run, never MIR-NACKed. */
     HOLD_BUREAU_UNAVAILABLE
 }

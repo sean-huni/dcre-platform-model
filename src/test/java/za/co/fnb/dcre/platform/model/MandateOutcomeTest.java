@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class MandateOutcomeTest {
 
     /**
-     * Snapshot of the MRV/MAF verdict vocabulary (M10 T1). These names are
+     * Snapshot of the MRV/MAS verdict vocabulary (M10 T1). These names are
      * persisted downstream (man_validation_log, MIR NACK reasons), so an
      * accidental rename or reorder is a data-contract break, not a refactor.
      */
