@@ -8,7 +8,7 @@ package za.co.fnb.dcre.platform.model;
  */
 public enum MandateOutcome {
 
-    /** MRV chain + MAF gate both passed; row proceeds to MIS initialization. */
+    /** MRV chain + MAF gate both passed; row proceeds to MIT initialization. */
     PASS,
 
     /** MRV structural stage: malformed record/field. Whole-file fatal rolls up BUSINESS_FILE_REJECTED; reportable via MIR NACK. */
