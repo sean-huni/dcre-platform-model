@@ -4,7 +4,7 @@ Zero-dependency shared domain vocabulary for the DCRE Collections 3.0 pipeline, 
 
 ## What it does
 
-Bottom of the DCRE platform-library stack: it encodes register-ratified rules as plain Java types so every stage service shares one vocabulary instead of re-implementing (and drifting on) the same rules. `platform-files` builds on it via an `api` dependency, `platform-batch` builds on `platform-files`, and the stage services (CRR, CTV, CDE, CIR, CRW, IXR, SXR, PXR, PRG, AIS, HCS) receive it transitively through those libraries. It has no runtime dependencies at all; JUnit only for tests.
+Bottom of the DCRE platform-library stack: it encodes register-ratified rules as plain Java types so every stage service shares one vocabulary instead of re-implementing (and drifting on) the same rules. `platform-files` builds on it via an `api` dependency, `platform-batch` builds on `platform-files`, and the stage services (collections CRR, CTV, CDE, CRW, CIR, CIX, CSX, CPX, CRG; payments PRR, PTV, PAI, PRW, PIR, PIX, PSX, PPX, PRG; mandates MRR, MRV, MAS, MIT, MIR, MRW, MIX, MSX, MPX, MRG; plus HCS) receive it transitively through those libraries. It has no runtime dependencies at all; JUnit only for tests.
 
 The four types (package `za.co.fnb.dcre.platform.model`):
 
@@ -87,5 +87,5 @@ Releasing a change: bump `version` in `build.gradle` (published artifacts are im
 
 - Platform libraries: [dcre-platform-files](https://github.com/sean-huni/dcre-platform-files), [dcre-platform-batch](https://github.com/sean-huni/dcre-platform-batch), [dcre-platform-persistence](https://github.com/sean-huni/dcre-platform-persistence)
 - Orchestrator: [dcre-agt](https://github.com/sean-huni/dcre-agt)
-- Stage services: [dcre-crr](https://github.com/sean-huni/dcre-crr), [dcre-ctv](https://github.com/sean-huni/dcre-ctv), [dcre-cde](https://github.com/sean-huni/dcre-cde), [dcre-cir](https://github.com/sean-huni/dcre-cir), [dcre-crw](https://github.com/sean-huni/dcre-crw), [dcre-ixr](https://github.com/sean-huni/dcre-ixr), [dcre-sxr](https://github.com/sean-huni/dcre-sxr), [dcre-pxr](https://github.com/sean-huni/dcre-pxr), [dcre-prg](https://github.com/sean-huni/dcre-prg), [dcre-ais](https://github.com/sean-huni/dcre-ais), [dcre-hcs](https://github.com/sean-huni/dcre-hcs)
+- Stage services: [dcre-crr](https://github.com/sean-huni/dcre-crr), [dcre-ctv](https://github.com/sean-huni/dcre-ctv), [dcre-cde](https://github.com/sean-huni/dcre-cde), [dcre-cir](https://github.com/sean-huni/dcre-cir), [dcre-crw](https://github.com/sean-huni/dcre-crw), [dcre-cix](https://github.com/sean-huni/dcre-cix), [dcre-csx](https://github.com/sean-huni/dcre-csx), [dcre-cpx](https://github.com/sean-huni/dcre-cpx), [dcre-crg](https://github.com/sean-huni/dcre-crg), [dcre-pai](https://github.com/sean-huni/dcre-pai), [dcre-hcs](https://github.com/sean-huni/dcre-hcs)
 - Infrastructure and tooling: [dcre-infra](https://github.com/sean-huni/dcre-infra), [dcre-fixture-toolkit](https://github.com/sean-huni/dcre-fixture-toolkit), [dcre-design-register](https://github.com/sean-huni/dcre-design-register), [dcre-rpt](https://github.com/sean-huni/dcre-rpt)
