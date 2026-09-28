@@ -91,9 +91,7 @@ dependencies {
 
 Releasing a change: bump `version` in `build.gradle` (published artifacts are immutable, never
 re-publish the same version), `./gradlew test publishToMavenLocal`, then bump the dependency in
-`platform-files` and republish the chain. Fleet release tags (digits-only three-component SemVer, no
-`v` prefix) mark this repo uniformly with the rest of the fleet and are independent of the artifact
-version.
+`platform-files` and republish the chain. Release tags (digits-only three-component SemVer, no `v` prefix) are independent of the artifact version; this repo carries 1.0.0 through 2.2.1, and tagging is not uniform across the fleet (`git ls-remote --tags`, checked 2026-09-28).
 
 ## Configuration
 
